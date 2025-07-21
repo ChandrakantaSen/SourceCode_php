@@ -1,0 +1,15 @@
+<html>  
+<body>
+    <form name="entry_form" action="entry_update_script.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="entry_id" value="">
+        <input type="hidden" name="entry_item_id" value="">
+        Truck/Railcar/Barge#:<input type="text" name="pro_number" value=""><br>
+        BOL #:<input type="text" name="bol" value=""><br>
+        <input type="submit" name="entry_submit" value="Add New Entry!">
+    </form>
+    <form name="entry_form_add" action="entry_view.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="entry_id" value="">
+        <input type="submit" name="submit" value="Add New Item!">
+    </form>
+</body>
+</html>

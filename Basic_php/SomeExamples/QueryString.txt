@@ -1,0 +1,3 @@
+action="a.php?r=<?php echo $amt?>"
+
+$p = $_REQUEST['r'];
