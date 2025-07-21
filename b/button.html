@@ -1,0 +1,17 @@
+<html>  
+<body>
+    <script type="text/javascript">
+
+    function submitAction(act) {
+         document.sample.action = act;
+         document.sample.submit();
+
+    }
+    </script>
+    <form name ="sample" action="default.php">
+         <input type="button" value = "blah1" onClick="submitAction('phpPage1.php')">
+         <input type="button" value = "blah2" onClick="submitAction('phpPage2.php')">
+    </form>
+</body>
+</html>
+
