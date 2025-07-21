@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1ce5e8761f27555b4e5ad5a69d0cecbea748a9c4ec8d7e7062669f4439804c03
-size 486
+<?php
+/**
+ * Created by Chris on 9/29/2014 3:56 PM.
+ */
+
+class Token {
+    public static function generate() {
+        return Session::put(Config::get('sessions/token_name'), md5(uniqid()));
+    }
+
+    public static function check($token) {
+        $tokenName = Config::get('sessions/token_name');
+
+        if(Session::exists($tokenName) && $token === Session::get($tokenName)) {
+            Session::delete($tokenName);
+            return true;
+        }
+
+        return false;
+    }
+}

@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:671599e852b4411678ae31e3e9188d1965b11ccb2ef1aa92fafc0bc76afe21c7
-size 577
+<?php
+require_once("../../include/initialize.php");
+if(!isset($_SESSION['ACCOUNT_ID'])){
+	redirect(web_root."admin/index.php");
+}
+
+$view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
+ $title="Academic Year"; 
+ $header=$view; 
+switch ($view) {
+	case 'list' :
+		$content    = 'list.php';		
+		break;
+
+	case 'add' :
+		$content    = 'add.php';		
+		break;
+
+	case 'edit' :
+		$content    = 'edit.php';		
+		break;
+    case 'view' :
+		$content    = 'view.php';		
+		break;
+
+	default :
+		$content    = 'list.php';		
+}
+require_once ("../theme/templates.php");
+?>
+  

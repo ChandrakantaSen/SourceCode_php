@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:987d870f39c5ca0cfe0e6488d0a2b15139af500b7c4817f034c1db4554a10b3d
-size 327
+<?php
+
+	include_once("DAO.php");
+	
+	//$fn = $_POST['fname'];
+	//$ln = $_POST['lname'];
+	$sal = $_POST['salary'];
+	
+	$sql = ("DELETE FROM `emp` WHERE salary <= $sal");
+	
+	if(!mysql_query($sql,$con))
+	{
+		die('Error: '.mysql_error());
+	}
+	else
+	{
+		echo("<br/>");
+		echo("<b>1...record deleted!</b>");
+	}
+	
+	mysql_close($con);
+?>

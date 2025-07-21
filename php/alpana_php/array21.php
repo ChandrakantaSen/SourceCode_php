@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b748ebd9da2eef092b5e81c94a721561db69c516a62c2ecd6af23d473106762f
-size 290
+<?php
+$numbers = array(1,2,3,4);
+foreach ($numbers as $value)
+{
+echo " value is: ".$value."<br/>";
+}
+$numbers[0] = " one ";
+$numbers[1] = " two ";
+$numbers[2] = " three ";
+$numbers[3] = " four ";
+$numbers[4] = " five ";
+foreach ($numbers as $value)
+{
+ echo" value is: ".$value."<br/>";
+}
+?>

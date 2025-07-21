@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bfbc8578db4a428fe39d973083dba5692220dd1d25856c2956412f3e583e09f0
-size 356
+<?php
+
+	include_once("DAO.php");
+	
+	$fn = $_POST['fname'];
+	$ln = $_POST['lname'];
+	$sal = $_POST['salary'];
+	
+	$sql = ("INSERT INTO `emp`(`fname`, `lname`, `salary`) VALUES ('$fn','$ln','$sal')");
+	
+	if(!mysql_query($sql,$con))
+	{
+		die('Error: '.mysql_error());
+	}
+	else
+	{
+		echo("<br/>");
+		echo("<b>1...record added!</b>");
+	}
+	
+	mysql_close($con);
+?>

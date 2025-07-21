@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:03c6c283ec0b26fc6b7a2919de8c69738dbe81914f077829aa464fc66ab46297
-size 909
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        .wrapper{
+            width: 750px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h1>Invalid Request</h1>
+                    </div>
+                    <div class="alert alert-danger fade in">
+                        <p>Sorry, you've made an invalid request. Please <a href="index.php" class="alert-link">go back</a> and try again.</p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>

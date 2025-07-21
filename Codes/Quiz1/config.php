@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5d9e7f4a1e87b87fc6124f426738900aa68c8ecdb0fb681e74a333600984340f
-size 450
+<?php
+/**
+@author vetripandi
+@copyright http:www.vetbossel.in
+ */
+
+require_once 'messages.php';
+
+//site specific configuration declartion
+define( 'BASE_PATH', 'http://localhost/');
+define( 'DB_HOST', 'localhost' );
+define( 'DB_USERNAME', 'root');
+define( 'DB_PASSWORD', '');
+define( 'DB_NAME', 'user-login');
+
+function __autoload($class)
+{
+	$parts = explode('_', $class);
+	$path = implode(DIRECTORY_SEPARATOR,$parts);
+	require_once $path . '.php';
+}

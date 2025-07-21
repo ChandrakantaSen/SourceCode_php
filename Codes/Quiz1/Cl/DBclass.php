@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be1f6dc0988776965bae532cacc24a6eb20afc1c9309f567cd5a156d972bd1a1
-size 351
+<?php
+class Cl_DBclass
+{
+	/**
+	 * @var $con will hold database connection
+	 */
+	public $con;
+	
+	/**
+	 * This will create Database connection
+	 */
+	public function __construct()
+	{
+		$this->con = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+		if( mysqli_connect_error()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+}

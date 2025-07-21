@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c12dd3721e4597e360c402568f75a3975108ed16425b26b6a46862af2ac3e3af
-size 536
+<?php
+	$dbhost = "localhost";
+	$usernm = "root";
+	$pwd    = "";
+	$dbname = "db";
+	
+	try 
+	{
+		$con = new PDO("mysql:host=$dbhost;dbname=$dbname", $usernm, $pwd);
+		$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		echo "Database connected - Host details: ".'<b>'.$con -> getAttribute(constant("PDO::ATTR_CONNECTION_STATUS")).'</b>';
+		echo "<br>"."Database Name: ".$dbname;
+	}
+	catch(PDOException $e)
+    {
+		die ("Connection failed: " . $e->getMessage());
+	}
+	
+	echo "<br>";
+	#echo "Connection closed ".$con = 1;
+?>

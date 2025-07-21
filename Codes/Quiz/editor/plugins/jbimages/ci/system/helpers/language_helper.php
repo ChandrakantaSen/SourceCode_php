@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dafff988b9cbc7f2ab59b3ceec0e07896d95cc238b4f9cd3ab45aebf5a90bfbc
-size 1409
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP 5.1.6 or newer
+ *
+ * @package		CodeIgniter
+ * @author		ExpressionEngine Dev Team
+ * @copyright	Copyright (c) 2008 - 2011, EllisLab, Inc.
+ * @license		http://codeigniter.com/user_guide/license.html
+ * @link		http://codeigniter.com
+ * @since		Version 1.0
+ * @filesource
+ */
+
+// ------------------------------------------------------------------------
+
+/**
+ * CodeIgniter Language Helpers
+ *
+ * @package		CodeIgniter
+ * @subpackage	Helpers
+ * @category	Helpers
+ * @author		ExpressionEngine Dev Team
+ * @link		http://codeigniter.com/user_guide/helpers/language_helper.html
+ */
+
+// ------------------------------------------------------------------------
+
+/**
+ * Lang
+ *
+ * Fetches a language variable and optionally outputs a form label
+ *
+ * @access	public
+ * @param	string	the language line
+ * @param	string	the id of the form element
+ * @return	string
+ */
+if ( ! function_exists('lang'))
+{
+	function lang($line, $id = '')
+	{
+		$CI =& get_instance();
+		$line = $CI->lang->line($line);
+
+		if ($id != '')
+		{
+			$line = '<label for="'.$id.'">'.$line."</label>";
+		}
+
+		return $line;
+	}
+}
+
+// ------------------------------------------------------------------------
+/* End of file language_helper.php */
+/* Location: ./system/helpers/language_helper.php */

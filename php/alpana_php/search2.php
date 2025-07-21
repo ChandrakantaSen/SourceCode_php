@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:72adeef35dacc12c7b67358c38308540ba20bc6b6c967dfafb5b926d95f4b463
-size 280
+<?php
+
+	include_once("DAO.php");
+	
+	$fn = $_POST['fname'];
+	
+	$sql = ("select distinct * from `emp` where 'fname' = $fn");
+	
+	if(!mysql_query($sql,$con))
+	{
+		die('error: '.mysql_error());
+	}
+	else
+	{
+		echo "<br/>";
+		echo "<b>element is found</b>";
+	}
+	mysql_close($con);
+	?>
+	

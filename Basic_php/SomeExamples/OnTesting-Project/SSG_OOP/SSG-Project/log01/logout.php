@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0daefa1157350fb8199d1d68b048d39514b643132873ba6246288ccaefa5b9a3
-size 152
+<?php
+/**
+ * Created by Chris on 9/29/2014 3:52 PM.
+ */
+
+require_once 'core/init.php';
+
+$user = new User();
+$user->logout();
+
+Redirect::to('index.php');

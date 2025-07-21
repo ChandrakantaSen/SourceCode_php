@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2ced58190263145d4cb05dd12ac86435890b0cc0a20c5eccab42aa4b67b01d2b
-size 194
+<?php
+$n=$_POST['input'];
+$sum=0;
+$p=$n;
+while((int)$n!=0)
+{
+$d = $n % 10;
+$sum = $sum + pow($d,3);
+$n = $n / 10;
+}
+if($sum==$p)
+{
+	print"armstrong num";
+}
+else
+{
+	print"not armstrong num";
+}
+?>

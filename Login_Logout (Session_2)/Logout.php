@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6c9e526a9490c9954ba4122189e0664c3636d2c99883bd34c4538a4f75f72e0f
-size 221
+<?php
+    session_start();
+    session_destroy();
+?>
+<html>
+<head>
+    <meta http-equiv="refresh" content="1; URL=LogIn.php">
+</head>
+<body>
+<?php
+    echo "<b>You Have Been Successfully Logged Out...";
+?>
+</body>
+</html>

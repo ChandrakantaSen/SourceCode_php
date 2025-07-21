@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e6e7bbb98cd3d24a68b333b4a1bab8eabf4ae79d8e7bb26311fdd073fa99d989
-size 152
+<?php
+
+$x=7;
+
+if($x==5)
+{
+echo "You are lucky today";
+}
+else if($x==7)
+{
+echo "You May lucky today";
+}
+else 
+
+{
+echo "You are not so lucky today.";
+}
+?>

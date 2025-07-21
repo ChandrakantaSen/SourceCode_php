@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9372e3243aebe002aae46d6aed79c7da7fb28461cc46a588c29ad9997460583c
-size 458
+<html>
+<head>
+<title></title>
+</head>
+<body>
+    <form name="form1" method="post" action="login_into_form.php">
+    <?php
+        session_start();
+        if ($_SESSION['username'])
+        {
+            $sncname=$_SESSION['username'];
+            echo "<strong>Wecome to </strong>".$sncname;
+            echo "<h1>Successfully loged in...</h1>";
+            echo "<br/><a href='logout_form.php'>Log Out</a></b>";
+        }
+    ?>
+    </form>
+</body>
+</html>

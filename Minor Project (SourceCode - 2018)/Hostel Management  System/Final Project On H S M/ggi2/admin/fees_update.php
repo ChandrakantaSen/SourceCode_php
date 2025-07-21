@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:612d50e9d28d98d1d64590fafdc179504c02d48cb108965e715636bc0b8f6aae
-size 595
+ <?php
+session_start();
+//$id=$_SESSION['id'];
+$connect=mysqli_connect("localhost","root","","ggi");
+$id=$_GET['id'];
+
+$tpay=$_POST['totalpay'];
+$repay=$_POST['rpay'];
+$pay=$_POST['pay']+$repay;
+$due=$tpay-$pay;
+//echo $due;
+$remark=$_POST['remarks'];
+$udate=$_POST['udate'];
+//$q="update fees set repayment='$repay' where id='$id'";
+$q="update fees set pay='$pay', due='$due',remarks='$remark',fees_update='$udate' where id='$id'";
+$qry=mysqli_query($connect,$q) or die(mysqli_error($connect));
+
+?>
+
+<script>
+    alert("Successfully Update !");
+    window.location="fees.php";
+    </script>
+
+ 

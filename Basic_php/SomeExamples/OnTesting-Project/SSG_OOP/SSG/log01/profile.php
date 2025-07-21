@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eda988b72b3136557c75a14e2055192649d503f470bc39be387cb232a9101126
-size 428
+<?php
+/**
+ * Created by Chris on 9/29/2014 3:52 PM.
+ */
+
+require_once 'core/init.php';
+
+if(!$username = Input::get('user')) {
+    Redirect::to('index.php');
+} else {
+    $user = new User($username);
+
+    if(!$user->exists()) {
+        Redirect::to(404);
+    } else {
+        $data = $user->data();
+?>
+
+        <h3><?php echo escape($data->username); ?></h3>
+        <p>Name: <?php echo escape($data->name); ?></p>
+
+<?php
+    }
+}

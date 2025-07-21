@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a5861b365e718cb7814cc11a94ccc4465b4ab124ab5d967388035b526a93b702
-size 121
+<?php 
+session_start();
+if(isset($_SESSION['email'])){
+session_destroy();}
+$ref= @$_GET['q'];
+header("location:$ref");
+?>

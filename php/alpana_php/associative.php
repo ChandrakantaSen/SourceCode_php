@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff9cd96b420d9a11226a6d72e60d86d7db8336d153439550c9d328142b4094ca
-size 528
+<?php
+$salaries = array("mohammad" => 2000, "qadir" => 1000, "zara" => 500);
+echo "Salary of mohammad is ". $salaries['mohammad'] . "<br />";
+echo "Salary of qadir is ". $salaries['qadir']. "<br />";
+echo "Salary of zara is ". $salaries['zara']. "<br />";
+$salaries['mohammad'] = "high";
+$salaries['qadir'] = "medium";
+$salaries['zara'] = "low";
+echo "Salary of mohammad is ". $salaries['mohammad'] . "<br />";
+echo "Salary of qadir is ". $salaries['qadir']. "<br />";
+echo "Salary of zara is ". $salaries['zara']. "<br />";
+?>

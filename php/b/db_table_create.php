@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e246536324dd2c057be4021d2a7f5ea11fc2826a82c6209fa2d43df21dd68831
-size 289
+<?php
+	$con = mysql_connect("localhost","root","");
+	if(!$con){
+		die('Could not connect'.mysql_error());
+	}
+	mysql_select_db("MCC_db",$con);
+	$sql = "CREATE TABLE Persons
+	(
+		 FirstName varchar(15)
+		,LastName varchar(15)
+		,Age int
+	)";
+	
+	mysql_query($sql,$con);
+	mysql_close($con);
+?>

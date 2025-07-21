@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:01a35698bee080f02020ccfcaea23cb2ff2272d2a565cd25d42566ff93b4e19c
-size 544
+<?php
+$nm=$_POST['name'];
+$strm=$_POST['stream'];
+$sem=$_POST['sem'];
+$cont=$_POST['contact'];
+$con=mysqli_connect("localhost","root","");
+if(!$con){
+die('could not connect'.mysqli_error());
+}
+mysqli_select_db($con,"ggi");
+$sql=("INSERT INTO apply(name,stream,sem,contact) VALUES('$nm','$strm','$sem','$cont')");
+if(!mysqli_query($con,$sql)){
+die('Error : '.mysqli_error($con));
+}
+echo '<script language="javascript">';
+echo 'alert("We Will Contact you Soon");';
+echo 'window.location.href="index.php"';
+echo '</script>';
+mysqli_close($con);
+?>

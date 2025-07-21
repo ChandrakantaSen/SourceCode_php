@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c475245d9ef6de7b336744477f1ebbc1b2777ff80f1b5e18e3e5f7a332274ce9
-size 169
+<?php 
+		$sq_base_url='http://localhost/savsoftquiz_v4.0_advance/';
+		$sq_hostname='localhost';
+		$sq_dbname='sqtry2';
+		$sq_dbusername='root';
+		$sq_dbpassword='';
+		?>

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3691c6d3c5e5791dd3b421f001665067049b24eff74083a67e8d889f09e5d187
-size 348
+<?php
+include('sani/connection.php');
+//$connect=mysqli_connect("localhost","root","","cms");
+$name=$_POST['name'];
+$email=$_POST['email'];
+$sms=$_POST['sms'];
+$q="insert into feedback values('','$name','$email','$sms')";
+$qry=mysqli_query($connect,$q);
+	?>
+	<script>alert("Successfully Message Send !");
+	window.location="index.html";
+	</script>
+	

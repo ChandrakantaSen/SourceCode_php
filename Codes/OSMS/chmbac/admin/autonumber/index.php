@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b551aec21c0c49a56aad67b624ea61d75a630e31429bf04b74a26808f4b290d
-size 597
+<?php
+require_once("../../include/initialize.php");
+//checkAdmin();
+  	 if (!isset($_SESSION['USERID'])){
+      redirect(web_root."admin/index.php");
+     }
+
+$view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
+$header=$view;
+$title="Autonumber";
+switch ($view) {
+	case 'list' :
+		$content    = 'list.php';		
+		break;
+
+	case 'add' :
+		$content    = 'add.php';		
+		break;
+
+	case 'edit' :
+		$content    = 'edit.php';		
+		break;
+    case 'view' :
+		$content    = 'view.php';		
+		break;
+
+	default :
+		$content    = 'list.php';		
+}
+require_once ("../theme/templates.php");
+?>
+  

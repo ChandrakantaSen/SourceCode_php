@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ad613e20f82fb1f830868980785fdf9bd638868d5ece1d68c7c0d6e699d760e5
-size 271
+<?php
+	$con = mysql_connect("localhost","root","");
+	if(!$con){
+		die('Could not connect:' .mysql_error());
+	}
+	if(mysql_query("CREATE DATABASE MCC_db",$con)){
+		echo"Database created";
+	}
+	else{
+		echo"Error creating database:".mysql_error();
+	}
+	
+	mysql_close($con);
+?>

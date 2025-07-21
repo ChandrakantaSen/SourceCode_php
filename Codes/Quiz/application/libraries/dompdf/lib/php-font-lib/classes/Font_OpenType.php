@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:73267d801a5ff7f3a070b27e18455e1be0208c68d59893c40acd8c76e67b38ed
-size 500
+<?php
+/**
+ * @package php-font-lib
+ * @link    https://github.com/PhenX/php-font-lib
+ * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+require_once dirname(__FILE__) . "/Font_TrueType.php";
+require_once dirname(__FILE__) . "/Font_OpenType_Table_Directory_Entry.php";
+
+/**
+ * Open Type font, the same as a TrueType one.
+ * 
+ * @package php-font-lib
+ */
+class Font_OpenType extends Font_TrueType {
+  // 
+}

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5666facbbc5d2979c2bb99bac60bf88298d4f519f95e294562ca329d8eb8d9a7
-size 972
+<nav class="ts-sidebar" style="background-color:#ff6633;">
+			<ul class="ts-sidebar-menu">
+			
+				<!--<li class="ts-label">Main</li>-->
+				<?PHP if(isset($_SESSION['login']))
+				{ ?>
+					<br><li><a href="dashboard.php"><i class="fa fa-desktop" style="color:white;"></i>Dashboard</a></li>
+					<li><a href="profile.php"><i class="fa fa-user" style="color:white;"></i> My Profile</a></li>
+<li><a href="change-password.php"><i class="fa fa-pencil-square-o" style="color:white;"></i>Change Password</a></li>
+<li><a href="access-log.php"><i class="fa fa-wrench" style="color:white;"></i>Access log</a></li>
+<?php } else { ?>
+				
+				<li><a href="registration.php"><i class="fa fa-files-o" style="color:white;"></i> User Registration</a></li>
+				<!--<li><a href="index.php"><i class="fa fa-users" style="color:white;"></i> User Login</a></li>
+				<li><a href="admin"><i class="fa fa-user" style="color:white;"></i> Admin Login</a></li>-->
+				<?php } ?>
+
+			</ul>
+		</nav>

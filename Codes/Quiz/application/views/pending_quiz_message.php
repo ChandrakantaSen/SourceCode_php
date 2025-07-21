@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3a92cf3bab51ce4588dffd75f1a946c50216a4b50fe738c717c9b4f9483f9e17
-size 479
+ <div class="container">
+
+   
+ <h3><?php echo $title;?></h3>
+   
+ 
+
+  <div class="row">
+   	
+<div class="col-md-8">
+<br> 
+  
+ 
+ <div class="alert alert-danger"><?php echo $this->lang->line('pending_quiz_message');?></div>
+ <br><br>
+ <?php echo str_replace('[link]',site_url($openquizurl),$this->lang->line('manual_redirect'));?>
+ 
+ 
+</div>
+       
+</div>
+
+ 
+ 
+
+
+
+</div>
+
+<script>
+setTimeout(function(){
+window.location="<?php echo site_url($openquizurl);?>";
+},7000);
+
+</script>

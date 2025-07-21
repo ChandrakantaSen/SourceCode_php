@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a4f8b0516f505a9690a60cb21baa687edbefd1c06af8a873e44fc5e2ff579e58
-size 643
+<?php
+$to = 'ckanta.sen@gmail.com';
+$subject = "Beautiful HTML Email using PHP by CodexWorld";
+// Get HTML contents from file
+$htmlContent = file_get_contents("email_template.html");
+
+// Set content-type for sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+// Additional headers
+$headers .= 'From: CodexWorld<info@codexworld.com>' . "\r\n";
+$headers .= 'Cc: codexworld@gmail.com' . "\r\n";
+
+// Send email
+if(mail($to,$subject,$htmlContent,$headers)):
+	$successMsg = 'Email has sent successfully.';
+else:
+	$errorMsg = 'Some problem occurred, please try again.';
+endif;
+?>

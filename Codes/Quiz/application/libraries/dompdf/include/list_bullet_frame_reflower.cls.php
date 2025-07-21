@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:46c1ff30b0a543f7807f924ffbda93713570f45c0b8475df2b3836d5a4724c76
-size 845
+<?php
+/**
+ * @package dompdf
+ * @link    http://dompdf.github.com/
+ * @author  Benj Carson <benjcarson@digitaljunkies.ca>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+/**
+ * Reflows list bullets
+ *
+ * @access private
+ * @package dompdf
+ */
+class List_Bullet_Frame_Reflower extends Frame_Reflower {
+
+  function __construct(Frame_Decorator $frame) { parent::__construct($frame); }
+    
+  //........................................................................
+
+  function reflow(Block_Frame_Decorator $block = null) {
+    $style = $this->_frame->get_style();
+
+    $style->width = $this->_frame->get_width();
+    $this->_frame->position();
+
+    if ( $style->list_style_position === "inside" ) {
+      $p = $this->_frame->find_block_parent();
+      $p->add_frame_to_line($this->_frame);
+    }
+
+  }
+}

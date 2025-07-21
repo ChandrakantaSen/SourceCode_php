@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e552f7c7eeb7f82e3ff9e10d8bac23051110632eab29a9676f0604984da338d
-size 354
+<?php
+	require_once('../connection.php');
+?>
+<?php
+	
+	$userid = $_POST['userid'];
+	$username=$_POST['username'];
+	$password=$_POST['password'];
+	
+	mysqli_query($conn,"UPDATE kahini_tbl_admin SET username='$username', password='$password' WHERE id='$userid'");
+	//header("location: user.php");
+	echo "<script>window.location.href='user.php';</script>";
+?>

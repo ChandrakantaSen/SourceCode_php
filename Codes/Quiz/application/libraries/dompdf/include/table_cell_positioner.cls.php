@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19fc46d3479327ab3045af694237fc88426d9cd6f77d9b2bb0421d90aa6da598
-size 716
+<?php
+/**
+ * @package dompdf
+ * @link    http://dompdf.github.com/
+ * @author  Benj Carson <benjcarson@digitaljunkies.ca>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+/**
+ * Positions table cells
+ *
+ * @access private
+ * @package dompdf
+ */
+class Table_Cell_Positioner extends Positioner {
+
+  function __construct(Frame_Decorator $frame) { parent::__construct($frame); }
+  
+  //........................................................................
+
+  function position() {
+
+    $table = Table_Frame_Decorator::find_parent_table($this->_frame);
+    $cellmap = $table->get_cellmap();
+    $this->_frame->set_position($cellmap->get_frame_position($this->_frame));
+
+  }
+}

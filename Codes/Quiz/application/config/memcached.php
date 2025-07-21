@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cfad23db6ee34c508f5468b611f7f4c653f4f7339ae65fc9f9b4f84828c3efea
-size 498
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+| -------------------------------------------------------------------------
+| Memcached settings
+| -------------------------------------------------------------------------
+| Your Memcached servers can be specified below.
+|
+|	See: https://codeigniter.com/user_guide/libraries/caching.html#memcached
+|
+*/
+$config = array(
+	'default' => array(
+		'hostname' => '127.0.0.1',
+		'port'     => '11211',
+		'weight'   => '1',
+	),
+);

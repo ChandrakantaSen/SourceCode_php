@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:29aa2658b039faa1db34472ab6695c54006475631b8b5f6d2a64506bbb3a76b4
-size 664
+<?php
+/**
+ * Created by Chris on 9/29/2014 3:55 PM.
+ */
+
+class Input {
+    public static function exists($type = 'post') {
+        switch($type) {
+            case 'post':
+                return (!empty($_POST)) ? true : false;
+                break;
+            case 'get':
+                return (!empty($_GET)) ? true : false;
+                break;
+            default:
+                return false;
+                break;
+        }
+    }
+
+    public static function get($item) {
+        if(isset($_POST[$item])) {
+            return $_POST[$item];
+        } else if(isset($_GET[$item])) {
+            return $_GET[$item];
+        }
+
+        return '';
+    }
+}

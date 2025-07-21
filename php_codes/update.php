@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45fed695c61b278d222bd77fd1e7e2250f0063723796e077a22d27008edbcf34
-size 358
+<html>
+<body>
+	<form name="form1" method="post" action="mailer.php">
+		<table border="1">
+			<tr>
+				<td>name:<input type="text" name="name"></input></td>
+			</tr>
+			<tr>
+				<td>city:<input type="text" name="city"></input></td>
+			</tr>
+			<tr>
+				<th><input type="submit" name="update" value="Update" /></th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

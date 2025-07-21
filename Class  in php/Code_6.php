@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:401a2ad9b50aa2fe5dba873dcc316e02a3f8294741f64a2afe85e5d209bc1332
-size 222
+<?php
+	
+	$aa = $_POST['num1'];
+	$bb = $_POST['num2'];
+	
+	class Code_6
+	{
+		public function add($x, $y)
+		{
+			$c = $x + $y;
+			return $c;
+		}
+	}
+	
+	$obj = new Code_6();
+	$d = $obj->add($aa,$bb);
+	
+	
+	echo "Sum is: ".$d;
+?>

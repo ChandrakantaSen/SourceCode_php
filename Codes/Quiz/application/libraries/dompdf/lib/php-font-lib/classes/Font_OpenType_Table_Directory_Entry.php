@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fb226a8519d0e6946682313a736e0230b12ad738091ec759e501d951153e183a
-size 503
+<?php
+/**
+ * @package php-font-lib
+ * @link    https://github.com/PhenX/php-font-lib
+ * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+require_once dirname(__FILE__) . "/Font_TrueType_Table_Directory_Entry.php";
+
+/**
+ * Open Type Table directory entry, the same as a TrueType one.
+ * 
+ * @package php-font-lib
+ */
+class Font_OpenType_Table_Directory_Entry extends Font_TrueType_Table_Directory_Entry {
+  
+}

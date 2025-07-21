@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4673134919d8a16153eab458eb2bd85a535ac6ea7a3bff19c1193339c374cc01
-size 206
+<?php
+        $con = mysql_connect('localhost','root','');
+
+        if(!$con){
+            die('database connetion error'.mysql_error());              
+        }
+        mysql_select_db("chandra",$con);
+?>

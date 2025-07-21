@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:72796e7c8d1f356d9ba7c8b517409de4f3d81ab201eddaf629cb1aef89167b6d
-size 414
+<?php
+$cars=array("Saab","Volvo","BMW","Toyota");
+echo $cars[2];
+
+
+$ages = array("Peter"=>32, "Quagmire"=>30, "Joe"=>34);
+echo $ages["Peter"];
+
+$families = array
+  (
+  "Griffin"=>array
+  (
+  "Peter",
+  "Lois",
+  "Megan"
+  ),
+  "Quagmire"=>array
+  (
+  "Glenn"
+  ),
+  "Brown"=>array
+  (
+  "Cleveland",
+  "Loretta",
+  "Junior"
+  )
+  );
+
+  echo "Is " . $families['Griffin'][2] .
+" a part of the Griffin family?";
+
+
+
+?>

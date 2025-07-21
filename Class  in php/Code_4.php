@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:493002380a3f3978b8a829a87d640098e1405daf86e5d1587a9f5fa52ba30f8a
-size 509
+<?php
+	class Code_4
+	{
+		function chk_Prime($a)
+		{
+				$c = 0;
+				for($j = 1; $j <= $a; $j++)
+				{
+					if($a % $j == 0)
+					{
+							$c++;
+					}
+				}
+				if($c == 2)
+				{
+						echo " ".$a;
+				}
+		}
+		function chk_factor()
+		{
+			$num = 10;
+			
+			for($i = $num; $i >= 1; $i--)
+			{
+				if($num % $i == 0)
+				{
+					$this -> chk_Prime($i);	
+				}
+			}
+		}
+		function chk_lrg_factr($b)
+		{
+			for($k = $b; $k >= $b; $k--)
+			{
+				
+			}
+		}
+		
+	}	
+		$obj = new Code_4();
+		
+		$obj -> chk_factor();
+?>

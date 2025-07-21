@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:65acd68ea2020a7e009dcbe644788b800d3372f3fbdc6415c7b28e445d835044
-size 593
+<?php
+$b = "<br/>";
+$fno = $_POST['fno'];
+$sno = $_POST['sno'];
+$ope = $_POST['ope'];
+
+/*
+print "<strong>Number 1 : </strong>".$fno.$b; 
+print "<strong>Number 2 : </strong>".$sno.$b;
+print "<strong>Operation :</sstrong>".$ope.$b;
+*/
+if($ope=="add")
+{
+	$output=$fno+$sno;
+	
+	print "Output is: ".$output;
+	
+}
+else if($ope=="subtract") 
+{
+	$output=$fno-$sno;
+	print "Output is: ".$output;
+	
+}
+else if($ope=="multiply")
+{
+	$output=$fno*$sno;
+	print "Output is: ".$output;
+	
+}
+else if($ope=="divide")
+{
+	$output=$fno/$sno;
+	print "Output is: ".$output;
+	
+}
+else
+{
+	$output= "error generated";
+}
+
+?>

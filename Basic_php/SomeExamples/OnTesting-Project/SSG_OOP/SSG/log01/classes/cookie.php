@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:07f2bd5561530822ef0a4c0b24f156a5302c8edbc13f31cc0bd9c6c4906c4e13
-size 531
+<?php
+/**
+ * Created by Chris on 9/29/2014 3:54 PM.
+ */
+
+class Cookie {
+    public static function exists($name) {
+        return (isset($_COOKIE[$name])) ? true : false;
+    }
+
+    public static function get($name) {
+        return $_COOKIE[$name];
+    }
+
+    public static function put($name, $value, $expiry) {
+        if(setcookie($name, $value, time() + $expiry, '/')) {
+            return true;
+        }
+        return false;
+    }
+
+    public static function delete($name) {
+        self::put($name, '', time() -1);
+    }
+}

@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:604e95c7b61e26b356c365c38b6e69b6f42d988ded76c849bc916a6563eff169
-size 303
+<?php
+
+class testView
+{
+	private $view_template;
+	public $view_data;
+	
+	function __construct($template, $view_data = NULL)
+	{
+		$this->view_template = $template;
+		$this->view_data = $view_data;
+	}
+	
+	public function update()
+	{
+		$view_data = $this->view_data;
+		include ($this->view_template);
+	}
+}
+?>

@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f0fa3f55d9b28364499d3f14b4810e28ac9a1ba0b4c4155aeea92b9ec442cb8
-size 555
+<html>
+<head></head>
+<body>
+	<form name= form1 action="mailer.php" method="post" align="center" >
+		<table border="0">
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" name="firstname" value="" placeholder="--Enter the name--" required="true"></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" name="lastname" value="" placeholder="--Enter the name--" required="true"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" name="submit" value="Register"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ea84670cad48fe62e14002992b6ba9277bbdf24148946d4f32f8610bba9ed578
-size 342
+<?php
+    include_once("DA02.php");
+	
+	$fn= $_POST['name'];
+	
+	$sql =("INSERT INTO 'reg'('name') VALUES('$fn')");
+	
+	if(mysqli_connect_errno())
+	{
+	   echo "Error to connect: ".mysqli_connect_error();
+	}
+	
+	 if(mysqli_query($con,$sql))
+	 {
+	 die('Error:'.mysql_error());
+	 }
+	 else
+	 {
+	 echo "data inserted...!";
+	 }
+	 mysqli_close($con);
+?>

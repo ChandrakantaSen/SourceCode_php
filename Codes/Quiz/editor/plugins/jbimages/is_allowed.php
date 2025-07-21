@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2ced2f107aaa097d4af914be9dc5cef8188afd3a33b438680b49cef8fee9b6ff
-size 787
+<?php
+/**
+ * Justboil.me - a TinyMCE image upload plugin
+ * jbimages/config.php
+ *
+ * Released under Creative Commons Attribution 3.0 Unported License
+ *
+ * License: http://creativecommons.org/licenses/by/3.0/
+ * Plugin info: http://justboil.me/
+ * Author: Viktor Kuzhelnyi
+ *
+ * Version: 2.3 released 23/06/2013
+ */
+ 
+ 
+/*-------------------------------------------------------------------
+|
+| IMPORTANT NOTE! In case, when TinyMCE’s folder is not protected with HTTP Authorisation,
+| you should require is_allowed() function to return 
+| `TRUE` if user is authorised,
+| `FALSE` - otherwise
+| 
+|  This is intended to protect upload script, if someone guesses it's url.
+| 
+-------------------------------------------------------------------*/
+
+function is_allowed()
+{
+	return TRUE;
+}
+
+?>

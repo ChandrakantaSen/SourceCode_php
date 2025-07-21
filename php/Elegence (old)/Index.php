@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca51b8a038c09c6fdad055186e105642321a08fecb4524395f93427f1ec042b9
-size 795
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <meta http-equiv="refresh">
+  <link rel="stylesheet" href="css/login_style.css" media="screen" type="text/css" />
+</head>
+
+<body>
+  <span href="#" class="button" id="toggle-login">Log in</span>
+<div id="login">
+  <div id="triangle"></div>
+  <h1>Login</h1>
+  <!-- form part starts here -->
+  <form name="form1" method="post" action="login_mailer.php">
+    <input type="text" name="adm_user" placeholder="Username" />
+    <input type="password" name="pwd" placeholder="Password" />
+    <input type="submit" value="Log in" name="login" />
+  </form>
+  <!-- form part ends here -->
+</div>
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>

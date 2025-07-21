@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe0f9cdd49fd6164a00b62f44233ec0c7e742d794158fa89974d8a41a5fdb9a7
-size 369
+<div class="clearfix"></div>
+	<!-- Footer -->
+    <footer>
+    	<div class="container-fluid">
+    		<p class="text-center">Copyright by <a href="http://vetbossel.in/" target="_blank">vetbossel.in</a> 2016</p>
+    	</div>
+    </footer>
+    <!-- /Footer -->
+  </body>
+</html>
+<?php ob_end_flush(); ?>
+<?php unset($_SESSION['success'] ); unset($_SESSION['error']);  ?>    

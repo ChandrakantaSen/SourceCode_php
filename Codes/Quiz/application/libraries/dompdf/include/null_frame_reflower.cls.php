@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:03d2f8cd78186a3569c27bd2b3d97985d06ead44726d7eff041ebcc0bde3f522
-size 475
+<?php
+/**
+ * @package dompdf
+ * @link    http://dompdf.github.com/
+ * @author  Benj Carson <benjcarson@digitaljunkies.ca>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+/**
+ * Dummy reflower
+ *
+ * @access private
+ * @package dompdf
+ */
+class Null_Frame_Reflower extends Frame_Reflower {
+
+  function __construct(Frame $frame) { parent::__construct($frame); }
+
+  function reflow(Block_Frame_Decorator $block = null) { return; }
+  
+}

@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19a725c7886037c009fad822a5ced680b4ac683f6b4315757a0722166058cc4e
-size 575
+<?php
+require_once("../../include/initialize.php");
+if(!isset($_SESSION['ACCOUNT_ID'])){
+	redirect(web_root."admin/index.php");
+}
+
+$view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
+ $title="Maintenance"; 
+ $header=$view; 
+switch ($view) {
+	case 'list' :
+		$content    = 'list.php';		
+		break;
+
+	case 'add' :
+		$content    = 'add.php';		
+		break;
+
+	case 'edit' :
+		$content    = 'edit.php';		
+		break;
+    case 'view' :
+		$content    = 'view.php';		
+		break;
+
+	default :
+		$content    = 'list.php';		
+}
+require_once ("../theme/templates.php");
+?>
+  

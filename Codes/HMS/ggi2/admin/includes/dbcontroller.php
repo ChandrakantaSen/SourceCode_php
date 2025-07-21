@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:00d1902669a0b9a2eb07909dd0e12b256741403ce4a505e9373b9d5f45b63fef
-size 286
+<?php
+$DB_host = "localhost";
+$DB_user = "root";
+$DB_pass = "";
+$DB_name = "ggi";
+try
+{
+ $DB_con = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
+ $DB_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+ $e->getMessage();
+}
+?>

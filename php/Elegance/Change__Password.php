@@ -1,3 +1,129 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d374965a35d58ea4564f7e7234680da32318280e7933e1b099aa6bac95be76c
-size 4107
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="eng" xml:lang="eng">
+<head>
+	<title>SIS</title>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/style0.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style1.css" type="text/css"/>
+	<link rel="stylesheet" href="css/style_chandra.css" type="text/css"/>
+    <style type="text/css">
+	<!--
+	.style1 {font-family: "Courier New", Courier,monospace; font-size: medium;}
+	.style2 {color: #FFCC00;}
+	-->
+    </style>
+</head>
+<body>
+	<!-- heading part -->
+	<a name="top"></a>
+	<div id="header">
+		<div class="gallery">
+		  <div align="center"><strong>Student Information System</strong></div>
+		</div>
+	</div>
+	<!-- heading part -->
+	<!-- top menu part -->
+	<ul id="navtop">
+		<div align="center">
+			<li><a href="index.html"> Home </a></li>
+      		<li><a href="#"> About Us </a></li>
+      		<li><a href="#"> Contact Us </a></li>
+      		<li><a href="#"> Announcemnt </a></li>
+            <li><a href="logout_form.php">Log Out</li>
+		</div>
+	</ul>
+	<p>
+	  <!-- top menu part -->
+	  <!-- left menu part -->
+	</p>
+	<div class="column-left">
+      <h3 class="style2">Administrator</h3>
+      <ul class="menu">
+        <li><a href="#">Change Password</a></li>
+        <li><a href="#">UserId Generation</a></li>
+        <li><a href="#">Edit Profile</a></li>
+        <li><a href="#">Add Administrator</a></li>
+      </ul>
+    </div>
+	<hr align="center" color="#333333"class="style1" />
+	<!-- left menu part -->
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+	
+<!-- ........................................code edit starts.......................................................... -->
+      <div id="skip-menu"></div>
+      <div class="box">
+      <div class="box-top"></div>
+      <div class="box-in">
+		<form id="form1" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data"> 
+      <table width="448" border="0" align="left" cellpadding="1" cellspacing="1" bgcolor="#FFFFCC">
+	  	<tr><!--heading part-->
+			<th width="370">
+			  <div align="center">
+				  <h2 align="center"><span class="style8">Change Password</span></h2>
+			  </div>
+			</th>
+		</tr>
+	  </table>
+      <p><br />
+      </p>
+      <table width="802" height="208" border="0" align="left" cellpadding="1" cellspacing="1">
+	  	<tr><!-- Old Password -->
+			<td width="228" height="39">
+				<div align="right">
+    			<p><label for="old_pwd"><span class="style3">Old Password:&nbsp;</span></label></p>
+				</div>
+	      </td>
+		  	<td width="719">
+				<div align="left">
+				<input name="old_pwd" type="password" class="style3" size="40" maxlength="33" />
+			  </div>
+	      </td>
+		</tr>
+		<tr><!-- New Password -->
+			<td width="228" height="46">
+				<div align="justify">
+    			<p><label for="new_pwd"><span class="style3">New Password:&nbsp;</span></label></p>
+				</div>
+		  </td>
+		  	<td width="719">
+				
+		      <div align="left">
+		        <input name="new_pwd" type="password" class="style3" size="40" maxlength="33" />
+                <span class="style9">*</span></div></td>
+		</tr>					
+				<br /><br />
+				<tr><td height="10">&nbsp;</td>
+				<td>&nbsp;</td>
+				</tr>
+		<tr>
+			<td>
+				<div align="left">&nbsp;</div>
+			</td>
+			<td>
+				<div align="left">
+				<input name="chngpass" type="submit" class="submitbutton" value="Submit"/>
+				&nbsp;
+				<input  name="reset" type="reset" class="submitbutton"  value="Reset"/>
+				</div>
+			</td>
+		</tr>
+	  </table>
+	  </form> 	
+	  
+		 <br /><br /><br /><br /><br /><br /><br /><br />
+         <br /><br /><br /><br /><br /><br /><br /><br />
+		 <?php include_once "chngpass_mailer.php"; ?>
+         
+      </div>
+<!-- ..............................................codes edit ends..................................................... -->	 
+    <!-- footer part -->
+    <ul id="navtop" >
+		<div align="center">
+	    <a href="#">Copyright @ chandrakanta sen </a>
+		</div>
+	</ul>
+	
+</div></body>
+</html>

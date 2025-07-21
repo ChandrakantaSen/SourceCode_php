@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5cd235e7a9b899843d77e6fdab7719d370d3a903e5d8383662f1b1fcdb85405a
-size 288
+<?php
+        $con = mysql_connect('localhost','root','');
+
+        if(!$con){
+            die('database connetion error'.mysql_error());              
+        }
+        else{
+            echo 'database successfully connected...';    
+        }
+        mysql_select_db("alpana",$con);
+?>

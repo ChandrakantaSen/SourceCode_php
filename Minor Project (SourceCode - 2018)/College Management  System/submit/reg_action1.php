@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:771d2d43664f504c1d1941fc5632b9db99700f4bccac171ec354c0cc4ae53343
-size 689
+<?php
+$connect=mysqli_connect("localhost","root","","cms");
+
+$name=$_POST['textnames'];
+$fname=$_POST['fathername'];
+$mname=$_POST['mothername'];
+$aname=$_POST['address'];
+$gname=$_POST['gender'];
+$sname=$_POST['State'];
+$dname=$_POST['District'];
+$cname=$_POST['City'];
+$pname=$_POST['Pincode'];
+$lname=$_POST['Course'];
+$ename=$_POST['Email_Id'];
+$bname=$_POST['DOB'];
+$kname=$_POST['contact'];
+
+$q="insert into studentinfo values('','$name','$fname','$mname','$aname','$gname','$sname','$dname','$cname','$pname','$lname','$ename','$bname','$kname')";
+$qry=mysqli_query($connect,$q);
+
+?>
+
+<script>
+    
+    alert("Successfully Register");
+    window.location="index.html";
+    </script>

@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dd90eb8cabb706537cd15bb91a260488f36aea8a0231bc31289f13ab74963bb
-size 571
+<?php
+require_once("../../include/initialize.php");
+if(!isset($_SESSION['ACCOUNT_ID'])){
+	redirect(web_root."admin/index.php");
+}
+
+$view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
+ $title="Section"; 
+ $header=$view; 
+switch ($view) {
+	case 'list' :
+		$content    = 'list.php';		
+		break;
+
+	case 'add' :
+		$content    = 'add.php';		
+		break;
+
+	case 'edit' :
+		$content    = 'edit.php';		
+		break;
+    case 'view' :
+		$content    = 'view.php';		
+		break;
+
+	default :
+		$content    = 'list.php';		
+}
+require_once ("../theme/templates.php");
+?>
+  

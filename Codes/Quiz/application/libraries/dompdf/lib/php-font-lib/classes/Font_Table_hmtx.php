@@ -1,3 +1,53 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a16aff02ee853174e9ed0fa0e49cf6eb0a9503c92f06ef4c573c4f58d811c11c
-size 1324
+<?php
+/**
+ * @package php-font-lib
+ * @link    https://github.com/PhenX/php-font-lib
+ * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+/**
+ * `hmtx` font table.
+ * 
+ * @package php-font-lib
+ */
+class Font_Table_hmtx extends Font_Table {
+  protected function _parse(){
+    $font = $this->getFont();
+    $offset = $font->pos();
+    
+    $numOfLongHorMetrics = $font->getData("hhea", "numOfLongHorMetrics");
+    $numGlyphs = $font->getData("maxp", "numGlyphs");
+    
+    $font->seek($offset);
+    
+    $data = array();
+    for($gid = 0; $gid < $numOfLongHorMetrics; $gid++) {
+      $advanceWidth = $font->readUInt16();
+      $leftSideBearing = $font->readUInt16();
+      $data[$gid] = array($advanceWidth, $leftSideBearing);
+    }
+    
+    if($numOfLongHorMetrics < $numGlyphs){
+      $lastWidth = end($data);
+      $data = array_pad($data, $numGlyphs, $lastWidth);
+    }
+    
+    $this->data = $data;
+  }
+  
+  protected function _encode() {
+    $font = $this->getFont();
+    $subset = $font->getSubset();
+    $data = $this->data;
+    
+    $length = 0;
+    
+    foreach($subset as $gid) {
+      $length += $font->writeUInt16($data[$gid][0]);
+      $length += $font->writeUInt16($data[$gid][1]);
+    }
+    
+    return $length;
+  }
+}

@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a3e8ad60ce3cf4c7fced66d3a10994234fb27543a4880edae7a41e4d4390367
-size 370
+<html>
+<head>
+<title>Search</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form method="post" action="search_Form.php" >
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><input type="text" name="query" id="text" /><input type="submit" name="submit" id="search" value="Search" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html> 

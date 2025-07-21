@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b4bbeac9f5e0eb400c316d498f0cada2b38129718bde62cc70eccc6e051ee93d
-size 397
+<?php
+class A
+{
+	public $a=10,$b=20;
+	function show()
+	{
+		echo "Numbers are: ".$this->a." and ".$this->b."<br>";
+	}
+	function add()
+	{
+		$c = $this->a + $this->b;
+		echo "Sum is: ".$c."<br>";
+	}
+	function diff($x, $y)
+	{
+		$z = $x - $y;
+		return $z;
+	}
+};
+	$obj = new A();	//object creation	
+	$obj -> show(); //function call show()
+	$obj -> add();
+	echo "Difference is: ".$obj -> diff(100,50);
+?>

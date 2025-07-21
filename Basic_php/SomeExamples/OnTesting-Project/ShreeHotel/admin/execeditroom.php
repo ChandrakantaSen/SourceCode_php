@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8c49e901f535fcd3204ebd5558f94d2027126def571a462f07770c3cd478235c
-size 437
+<?php
+    require_once('../connection.php');
+	
+	$roomid = $_POST['roomid'];
+	$type=$_POST['type'];
+	$rate=$_POST['rate'];
+	$description=$_POST['description'];
+	$rnumber=$_POST['rnumber'];
+	mysqli_query($conn,"UPDATE kahini_room_details SET name='$type', price='$rate', description='$description', room_number='$rnumber' WHERE id='$roomid'");
+	//header("location: rooms.php");
+	echo "<script>window.location.href='rooms.php'</script>";
+?>

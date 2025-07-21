@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c07654fc2a43c6e2c53e6dbc7ff264a5ea264b3e3b3e666b7dfda237269a83ed
-size 329
+<?php
+    $a = 400;
+
+    $b = &$a;
+    print "value of a: ".$a."<br/>";
+    print "value of b: ".$b."<br/>";
+
+    ++$a;
+    print "increment value of a: ".$a."<br/>";
+    print "increment value of b: ".$b."<br/>";
+
+    ++$b;
+    print "increment value of a: ".$a."<br/>";
+    print "increment value of b: ".$b."<br/>";
+
+    
+
+?>

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc31543b72dc839236239eb6f9ed4e9a7b4aa47c035052a8261c5eb0bd31957e
-size 439
+<?php
+ require_once ("../../include/initialize.php");
+
+//get search term
+$searchTerm = $_GET['term'];
+//get matched data from skills table
+ $mydb->setQuery("SELECT * FROM `tblstudent` WHERE `IDNO` LIKE '%".$searchTerm."%' GROUP BY IDNO");
+ $res = $mydb->loadResultList();
+ foreach ($res as $row ) {
+  # code...
+    // $data[] = $row->FNAME . ' ' . $row->LNAME;
+    $data[] = $row->IDNO;
+ }
+ 
+//return json data
+echo json_encode($data);
+?>

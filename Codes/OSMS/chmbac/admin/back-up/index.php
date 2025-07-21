@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba9b7b796536d36f2ccce52d21620dbf5dec204015b980d8e995e1f198e9d4fb
-size 446
+<?php
+require_once("../../include/initialize.php");
+if(!isset($_SESSION['ACCOUNT_ID'])){
+	redirect(web_root."admin/index.php");
+}
+
+$view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
+ $title="Back-up and Restore"; 
+ $header=$view; 
+switch ($view) {
+	case 'backuprestore' :
+		$content    = 'backuprestore.php';		
+		break;
+ 
+	default :
+		$content    = 'backuprestore.php';		
+}
+require_once ("../theme/templates.php");
+?>
+  

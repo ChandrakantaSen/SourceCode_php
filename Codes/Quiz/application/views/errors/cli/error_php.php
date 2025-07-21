@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c3a483c887d78e2eaf31192ff91ba200a7957de6e3552686f0cc779e22108896
-size 690
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+A PHP Error was encountered
+
+Severity:    <?php echo $severity, "\n"; ?>
+Message:     <?php echo $message, "\n"; ?>
+Filename:    <?php echo $filepath, "\n"; ?>
+Line Number: <?php echo $line; ?>
+
+<?php if (defined('SHOW_DEBUG_BACKTRACE') && SHOW_DEBUG_BACKTRACE === TRUE): ?>
+
+Backtrace:
+<?php	foreach (debug_backtrace() as $error): ?>
+<?php		if (isset($error['file']) && strpos($error['file'], realpath(BASEPATH)) !== 0): ?>
+	File: <?php echo $error['file'], "\n"; ?>
+	Line: <?php echo $error['line'], "\n"; ?>
+	Function: <?php echo $error['function'], "\n\n"; ?>
+<?php		endif ?>
+<?php	endforeach ?>
+
+<?php endif ?>

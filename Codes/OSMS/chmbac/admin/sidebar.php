@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1d9f437783486d75bc710d1b140a1c4b29a65a977ac2ea7fc9cd3095f46eeca
-size 1341
+    <div class="col-md-3">
+            <div class="sidebar-nav-fixed affix">
+                <div class="well">
+                    <ul class="nav ">
+                        <li class="nav-header"></li>
+                        <!-- <li class="active"><a href="#">Link</a> -->
+                        <li class="dropdown-toggle">
+                          <?php if($_SESSION['TYPE']=='Administrator'){ 
+                            ?>
+                            <a href="<?php echo web_root; ?>admin/modules/setting/index.php"><span class="glyphicon glyphicon-cog"></span>Settings</a>
+                         <?php
+                          }?>         
+                        </li>
+                        <li><a href="#">Link</a>
+                        </li>
+                        <li><a href="#">Link</a>
+                        </li>
+                        <li class="nav-header">Sidebar</li>
+                        <li><a href="#">Link</a>
+                        </li>
+                        <li><a href="#">Link</a>
+                        </li>
+                        <li><a href="#">Link</a>
+                        </li>
+                         
+                       
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/sidebar-nav-fixed -->
+        </div>

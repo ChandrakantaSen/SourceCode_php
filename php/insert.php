@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2fc95938105cde2ed8c2ad41ed8d86197665037e3309171c71add464fabadff0
-size 565
+<?php
+            include_once ('DAO.php');
+            
+            $fn = $_POST['fname'];
+            $ln = $_POST['lname'];
+            $age = $_POST['age'];
+            $add = $_POST['address'];
+            $city = $_POST['city'];
+            
+            $sql = ("INSERT INTO `reg`(`fname`, `lname`, `age`, `address`, `city`) VALUES ('$fn','$ln','$age','$add','$city')");
+            
+            if(!mysql_query($sql,$con)){
+                die('Error:'.mysql_error());
+            }
+            echo"! record added";
+            mysql_close($con);
+?>
+
+	
+	
+	

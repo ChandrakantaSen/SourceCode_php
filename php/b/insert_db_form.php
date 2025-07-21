@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74798fe1cb7f2ae0b8ddb491cb7f93bfdaea2203f09f6e88ff7d256c693b3fcf
-size 247
+<html>
+<body>
+<form action = "insert.php" method = "post">
+	FirstName:: <input type="text" name="fname"><br/>
+	Lastname: <input type="text" name="lname"><br/>
+	Age: <input type="text" name="age"><br/>
+	<input type="submit">
+</form>
+</body>
+</html>

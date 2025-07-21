@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a9ce7eddab237055fc4a00ba740f3bce31bab1062f07eed60416dde52ca0e3d
-size 384
+<?php
+	/*$db_username = 'hexcode';
+	$db_password = 'Tango001';
+	$db_name = 'hotelsnlodges';
+	$db_host = 'easymigcom.netfirmsmysql.com';
+	$conn = new mysqli($db_host, $db_username, $db_password,$db_name);*/
+?>
+
+<?php
+	$db_username = 'root';
+	$db_password = '';
+	$db_name = 'hotelsnlodges';
+	$db_host = 'localhost';
+	$conn = new mysqli($db_host, $db_username, $db_password,$db_name);
+?>

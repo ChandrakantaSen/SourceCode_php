@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31abb3116d0ec00dbe93d3672b3872ab6e6b9e768843e48e3f96d090bd005c74
-size 460
+<?php
+	## Programme on OOP(single inheritence - php)
+
+	class Parent
+	{
+    	function p1()
+    	{
+        	echo "I'm from Parent Class...!";
+    	}
+	}
+?>
+
+<?php
+
+public class Child extends Parent {
+    public void c1()
+    {
+        System.out.println("Child method");
+    }
+    public static void main(String[] args)
+    {
+        Child cobj = new Child();
+        cobj.c1();   //method of Child class
+        cobj.p1();   //method of Parent class 
+    }
+}
+
+?>

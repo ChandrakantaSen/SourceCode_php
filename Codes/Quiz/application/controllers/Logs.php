@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:78b6c00508dc4fd5a2e39d5d13030e5f4340c1bc2b0271ba7cacb6521c21faba
-size 489
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Logs extends CI_Controller {
+
+	 function __construct()
+	 {
+	   parent::__construct();
+	   $this->load->database();
+	   
+	 }
+	 
+	 
+	public function index($filename=''){
+        if($filename==''){
+        $filename="log-".date('Y-m-d',time()).".php";
+        }
+        echo "<pre>";
+        $file_content=file_get_contents('application/logs/'.$filename);
+       print_r($file_content);
+        }	 
+		 
+		 
+		
+		
+}

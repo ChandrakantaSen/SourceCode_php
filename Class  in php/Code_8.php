@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bd40ea39646a3a4114a4708a15a95e2082f53ed32c2d1f59de06dad27be77daa
-size 241
+<?php
+	
+	$number = $_POST['num'];
+	
+	class factorial
+	{
+		function facto($num)
+		{
+			$f=1;
+			
+			for($i=1;$i<=$num;$i++)
+			{
+				$f = $f * $i;
+			}
+			echo "Factorial is: ".$f;
+		}
+	}
+	
+	$obj = new factorial();
+	$obj -> facto($number);
+?>

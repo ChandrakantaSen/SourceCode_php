@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b110ad39a5d4994a20d2b589852582eecbb214b53586a90fba9301156274df44
-size 411
+<?php
+	$dbhost = "localhost";
+	$usernm = "root";
+	$pwd    = "";
+	$dbname = "db";
+	
+	$con = new mysqli($dbhost,$usernm,$pwd,$dbname);
+	
+	if(!$con)
+	{
+		die ("Error: database not connected ".$con -> connect_error);	
+	}
+	else
+	{
+		echo "Database connected - Host details: ".'<b>'.$con -> host_info.'</b>';
+		echo "<br>"."Database Name: ".$dbname;
+	}
+	
+	echo "<br>";
+	#echo "Connection closed ".$con -> close();
+?>

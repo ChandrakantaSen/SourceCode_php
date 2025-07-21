@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8a303f3ac58766208612995aa0a3f890cf56184c0315dd118bd683055807a4a3
-size 226
+<?php
+
+$lang['jb_blankpage_message'] = "Le processus de téléchargement n\'a pas encore commencé"; // Google translate))
+
+/* End of file jbstrings_lang.php */
+/* Location: ./application/language/french/jbstrings_lang.php */

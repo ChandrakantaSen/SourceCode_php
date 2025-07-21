@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8dd8f614e46f1b7188b4d63d382ab746291b64a6b6eb233fd314753fabb0eacc
-size 117
+<html>
+<body>
+
+<?php
+$i=1;
+while($i<=5)
+  {
+  echo "The number is " . $i . "<br />";
+  $i++;
+  }
+?>
+
+</body>
+</html>

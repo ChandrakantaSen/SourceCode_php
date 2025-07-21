@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ab84ed59802519a250a2356c5d2673d2ceb80b3543abefcadcff4fa743fa022
-size 543
+<div class="brand clearfix" style="background-color:green">
+		<a href="#" class="logo" style="font-size:16px;">College Management System</a>
+		<span class="menu-btn"><i class="fa fa-bars"></i></span>
+		<ul class="ts-profile-nav">
+			<li class="ts-account">
+				<a href="#"><img src="img/ts-avatar.jpg" class="ts-avatar hidden-side" alt=""> Account <i class="fa fa-angle-down hidden-side"></i></a>
+				<ul>
+					<li><a href="admin-profile.php">My Account</a></li>
+					<li><a href="logout.php">Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>

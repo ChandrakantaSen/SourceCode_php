@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9ed2720b259f19856a6e52a9cc65dad1f2bb7e5a5a32175d15fe2dbb3c760cf8
-size 443
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style>
+html,body{
+	margin:0px;
+	padding:0px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+</style>
+	 
+</head>
+
+<body>
+  
+<div style="background-image:url('<?php echo base_url('images/certificate_bg.png');?>'); background-repeat: no-repeat; width:752px;height:505px;padding:45px; " > 
+ 
+<?php echo $certificate_text; ?>
+</div>
+</body>
+
+</html>

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b943051383d2b097af4682a191f9e668bab2b5fa3453862d437430ae13c5eab9
-size 830
+<?php
+            include_once("DAO.php");    
+            
+            /*************************************/
+            /* View data as HTML Table Code Part */  
+            /*************************************/
+            $fn = $_POST['fname'];
+            $result = mysql_query("SELECT distinct * FROM `reg` WHERE `name`='$name'");
+            echo "<table border='1'>
+                  <tr>
+                     <th>First_Name</th> 
+					 <th>City</th>
+                  </tr>";              
+            while($row = mysql_fetch_array($result)){
+                            echo "<tr>";
+                            echo "<td>" . $row['name'] . "</td>";
+							echo "<td>" . $row['city'] . "</td>";
+                            echo "</tr>";
+            }
+            echo"</table>";
+            mysql_close($con);    
+?>

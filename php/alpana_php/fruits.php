@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c2411329aeeab4206b8463518c16fd149a659c4bc6436e3d1df0d7e557da1d28
-size 222
+<?php
+$fruits = array (
+ "fruit" => array("a"=>"orange", "b"=>"banana", "c"=>"apple"),
+ "numbers" => array(1, 2, 3, 4, 5, 6),
+ "holes" => array("first", 5 => "second", "third")
+);
+
+echo $fruits['holes']['first']."<br>";
+?>

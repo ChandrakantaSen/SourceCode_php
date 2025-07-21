@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:52b625e45aba482e53734e8bf565978ea47ff6c35cfd013d3b5beb5a3278092b
-size 576
+<?php
+/**
+ * @package dompdf
+ * @link    http://dompdf.github.com/
+ * @author  Benj Carson <benjcarson@digitaljunkies.ca>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+/**
+ * Dummy decorator
+ *
+ * @access private
+ * @package dompdf
+ */
+class Null_Frame_Decorator extends Frame_Decorator {
+
+  function __construct(Frame $frame, DOMPDF $dompdf) {
+    parent::__construct($frame, $dompdf);
+    $style = $this->_frame->get_style();
+    $style->width = 0;
+    $style->height = 0;
+    $style->margin = 0;
+    $style->padding = 0;
+  }
+
+}

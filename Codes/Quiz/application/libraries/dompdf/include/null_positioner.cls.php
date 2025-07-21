@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8bbf89558eb1360857fb85f82838d8aacdb52c51ecabd9b7c3d8a0774a772310
-size 452
+<?php
+/**
+ * @package dompdf
+ * @link    http://dompdf.github.com/
+ * @author  Benj Carson <benjcarson@digitaljunkies.ca>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+/**
+ * Dummy positioner
+ *
+ * @access private
+ * @package dompdf
+ */
+class Null_Positioner extends Positioner {
+
+  function __construct(Frame_Decorator $frame) {
+    parent::__construct($frame);
+  }
+
+  function position() { return; }
+  
+}

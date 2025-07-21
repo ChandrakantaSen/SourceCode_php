@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4dc58e687e2ec734f042a7d00b0cc23510e9f083a4f75436f1a82b5d9ccaf51f
-size 516
+<?php
+/**
+ * Created by Chris on 9/29/2014 3:55 PM.
+ */
+
+class Redirect {
+    public static function to($location = null) {
+        if($location) {
+            if(is_numeric($location)) {
+                switch($location) {
+                    case 404:
+                        header('HTTP/1.0 404 Not Found');
+                        include 'includes/errors/404.php';
+                        break;
+                }
+            }
+            header('Location: '. $location);
+            exit();
+        }
+    }
+}

@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6b0b5bd7baec44a99e64d28ee2ff5806c71ffeca11df6634059fae69458a16cd
-size 732
+<?php
+/**
+ * @package dompdf
+ * @link    http://dompdf.github.com/
+ * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ */
+
+/**
+ * Embeds Javascript into the PDF document
+ *
+ * @access private
+ * @package dompdf
+ */
+class Javascript_Embedder {
+  
+  /**
+   * @var DOMPDF
+   */
+  protected $_dompdf;
+
+  function __construct(DOMPDF $dompdf) {
+    $this->_dompdf = $dompdf;
+  }
+
+  function insert($script) {
+    $this->_dompdf->get_canvas()->javascript($script);
+  }
+
+  function render(Frame $frame) {
+    if ( !$this->_dompdf->get_option("enable_javascript") ) {
+      return;
+    }
+      
+    $this->insert($frame->get_node()->nodeValue);
+  }
+}

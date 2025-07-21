@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9da8c9d2b3d9a191086e2ca41892240c74cca73ca19c49e80dc7c01e0bd19eee
-size 227
+<?php
+	$name=$_POST['name'];
+	$fname=$_POST['fname'];
+	$mob=$_POST['mobile'];
+	$email=$_POST['email'];
+	$add=$_POST['address'];
+	$dob=$_POST['dob'];
+	$SEX=$_POST[''];
+	$sal
+print "<strong>Name : </strong>".$fname." ".$lname;
+?>

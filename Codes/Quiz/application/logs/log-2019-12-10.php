@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:85f48b8226c123ccf3da4f02751761478669b555376c3a542373a965bfd4bafd
-size 917
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2019-12-10 11:14:01 --> Severity: Warning --> mysqli::real_connect(): (HY000/1049): Unknown database 'sqtry2' C:\xampp\htdocs\Codes\Quiz\system\database\drivers\mysqli\mysqli_driver.php 208
+ERROR - 2019-12-10 11:14:01 --> Unable to connect to the database
+ERROR - 2019-12-10 11:14:01 --> Severity: Warning --> mysqli::real_connect(): (HY000/1049): Unknown database 'sqtry2' C:\xampp\htdocs\Codes\Quiz\system\database\drivers\mysqli\mysqli_driver.php 208
+ERROR - 2019-12-10 11:14:01 --> Unable to connect to the database
+ERROR - 2019-12-10 11:14:01 --> Query error: Unknown database 'sqtry2' - Invalid query: SELECT *
+FROM `savsoft_quiz`
+ORDER BY `quid` DESC
+ LIMIT 5
+ERROR - 2019-12-10 11:14:01 --> Severity: Error --> Call to a member function result_array() on boolean C:\xampp\htdocs\Codes\Quiz\application\models\Quiz_model.php 37

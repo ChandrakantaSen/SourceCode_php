@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e8510e6651cff077f91db484a3af14365fa6ba2a56da11de311edbea8736c58d
-size 541
+<?php
+session_start();
+
+if ($_SESSION['username'])
+{
+    $username=$_SESSION['username'];
+
+if (isset($_POST['chngpass']))
+    {
+        $old_pwd = $_POST['old_pwd'];
+        $new_pwd = $_POST['new_pwd'];
+        
+        if($old_pwd !=="")
+        {
+            if($new_pwd !=="")
+            {
+                
+                
+            }
+            else
+            {
+                echo "Please Enter New Password";
+            }
+        }
+        else
+        {
+            echo "please enter current password";
+        }
+    }
+}
+?>

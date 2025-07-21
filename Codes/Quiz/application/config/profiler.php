@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c75856878b39a6994830f8d04288f9eb565ee958d136f9987983ec443a9e2819
-size 477
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+| -------------------------------------------------------------------------
+| Profiler Sections
+| -------------------------------------------------------------------------
+| This file lets you determine whether or not various sections of Profiler
+| data are displayed when the Profiler is enabled.
+| Please see the user guide for info:
+|
+|	https://codeigniter.com/user_guide/general/profiling.html
+|
+*/

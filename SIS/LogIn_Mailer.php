@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2d93c538f6022a9dde3ccd414d67869d73f40495611e16aeb4d70547b516949a
-size 1005
+<?php
+        session_start(); 
+        include_once 'DAO.php';
+
+        if (isset($_POST['login']))
+		{
+			$id = $_POST['adm_user'];
+			$pwd = $_POST['adm_pwd'];
+			
+			if ($id != "" && $pwd !="")
+			{
+				$query= mysql_query ("SELECT * FROM `lmiit_admin` WHERE `adm_user` ='$id' ");
+				$numrows= mysql_num_rows ($query);
+				
+				if($numrows != 0)
+				{
+					while ($rows = mysql_fetch_assoc($query))
+					{
+						$dbusername = $rows['adm_user'];
+						$dbname = $rows['adm_name'];
+						$dbpassword = $rows['adm_pwd'];
+					}
+					if ($id == $dbusername && $pwd == $dbpassword)
+					{	
+                        	
+						$_SESSION['username'] = $dbusername;
+                        $_SESSION['password'] = $dbpassword;
+						$_SESSION['name'] = $dbname;
+                        header ("location:Home.php") ;  //Change the header location...                        
+					}
+					else echo "Incorrect: Password";
+				}
+				else echo "Wrong: Username";
+			}
+			else echo "Enter Username & Password.";
+		}
+?>
