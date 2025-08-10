@@ -1,7 +1,0 @@
-<?php
-	$db_username = 'hexcode';
-	$db_password = 'Tango001';
-	$db_name = 'hct_test';
-	$db_host = 'easymigcom.netfirmsmysql.com';
-	$connection= new mysqli($db_host, $db_username, $db_password,$db_name);
-?>
