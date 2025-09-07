@@ -1,0 +1,14 @@
+.comment
+{
+margin:0;
+padding:0;
+
+overflow:hidden;
+}
+#particles-js
+{
+	position:absolute;
+height: 100%;
+width:100%;
+background-size:cover;
+}
