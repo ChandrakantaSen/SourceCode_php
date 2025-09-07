@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+*
+{
+	margin:0;
+	padding:0;
+}
+body
+{
+	background-color:#9FF;
+}
+#wrapper
+{
+	width:950px;
+	margin:0 auto;
+}
+#form1
+{
+	text-align:right;
+	margin-left:230px;
+	margin-top:50px;
+	color:#03F;
+}
+#nav
+{
+	width:250px;
+	height:40px;
+	padding-left:20px;
+	padding-top:20px;
+}
+#nav ul li
+{
+	list-style-type:none;
+}
+#nav a
+{
+	text-decoration:none;
+	text-transform:capitalize;
+	display:block;
+	color:#03F;
+	font-size:20px;
+	border:1px solid #06F;
+	padding:2px solid #03F;
+}
+#nav a:hover
+{
+	color:#C0C;
+}
